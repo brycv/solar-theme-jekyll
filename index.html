@@ -16,7 +16,13 @@ title: Solar Theme
 			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 		{% endif %}
 
+		{% if post.no-excerpt %}
 		<div class="post-content">{{ post.content }}</div>
+		{% else %}
+		<div class="post-content">{{ post.excerpt }}</div>
+
+		<h3><a href="{{ post.url }}"><i>Continue reading...</i></a></h3>
+		{% endif %}
 
 	</article>
 
